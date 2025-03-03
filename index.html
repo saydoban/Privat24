@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="/manifest.json">
   <title>Архів квитків</title>
   <link rel="stylesheet" href="style/style.css">
   <style>
@@ -253,11 +252,6 @@ function startTimer() {
     seconds--;
   }, 1000);
 }
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(() => {
-    window.scrollTo(0, 1);
-  }, 100);
-})
   </script>
 </body>
 
