@@ -232,7 +232,7 @@ header {
     
     </div>
      
-    <button class="scan-btn" onclick="startTimer()">Відсканувати QR-код</button>
+    <button class="scan-btn" onclick="startTimer()" onclick="saveData()">Відсканувати QR-код</button>
   </div>
 
 
@@ -258,7 +258,8 @@ header {
 
     alert('Данные сохранены!');
   }
-    let timerInterval;
+  
+  let timerInterval;
 function startTimer() {
   clearInterval(timerInterval);
   let seconds = 39 * 60 + 40;
