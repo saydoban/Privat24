@@ -6,168 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
   <title>Архів квитків</title>
-  <link rel="stylesheet" href="style/style.css">
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #1e1e1e;
-  color: white;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+  <link rel="stylesheet" href="main.css">
 
-.app {
-  width: 360px;
-  background: #2a2a2a;
-  border-radius: 10px;
-  padding: 20px;
-  
-}
-
-header {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.back-arrow {
-  font-size: 34px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  background-color: #3a3a3a;
-  border: none;
-  border-radius: 40px;
-}
-
-.tabs button {
-  flex: 1;
-  padding: 10px;
-  background: #3a3a3a;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 40px;
-}
-
-.tabs .active {
-  background: #636363;
-  color: #4CAF50;
-}
-
-.ticket {
-  background: #3a3a3a;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.ticket-header {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.ticket-body {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.price {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 10px;
-}
-
-.input-container label {
-  font-size: 14px;
-  color: #bababa;
-}
-
-.input-container input {
-  background: #3a3a3a;
-  border: none;
-  color: white;
-  font-size: 18px;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.timer {
-  font-size: 20px;
-  font-weight: bold;
-  color: #4CAF50;
-  margin-top: 10px;
-}
-    
-/* АААААААААААААААААААААААААААААААААААААААААААААААААААААА */
-.scan-btn { 
-  width: 100%;
-  padding: 10px;
-  background: #4CAF50;
-  border: none;
-  color: rgb(23, 23, 23);
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 17vh;
-  cursor: pointer;
-}
-
-
-.verh-text {
-  font-size: 14px;
-  color: rgb(201, 201, 201);
-  line-height: 150%;
-}
-
-.gagagag-info {
-  display: flex;
-  align-items: center;
-}
-
-.input-container2 {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 10px;
-  width: 110px;
-}
-
-.input-container2 label {
-  font-size: 14px;
-  color: #bababa;
-}
-
-.input-container2 input {
-  background: #3a3a3a;
-  border: none;
-  color: white;
-  font-size: 14px;
-  padding: 2px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.green-ggg {
-  color: #4CAF50;
-}
-  </style>
 </head>
 
 <body>
@@ -201,80 +41,38 @@ header {
         <img src="img/1color.png" alt="Квиток" width="150">
         
         <div class="input-container">
-          <input type="text" id="date" value="№-">
-          <label for="date">Автобус</label>
+          <input type="text" id="bus" value="№-">
+          <label for="bus">Автобус</label>
         </div>
-       
+        
         <div class="gagagag-info">
-          
-          <div class="input-container2">
-            <label for="date">Дата</label>
-            <input type="text" id="date" value="" placeholder="01.01.2001">
-          </div>
-          
-          <div class="input-container2">
-            <label for="date">Час</label>
-            <input type="text" id="date" value="" placeholder="00:00:00">
-          </div>
-          
-          <div class="input-container2">
-            <label for="date">Пасажири</label>
-            <input type="text" id="date" value="2">
-          
-          </div>
-       </div>
         
-       <p class="green-ggg">Квиток разового використання</p>
+          <div class="input-container2">
+            <label for="dateInput">Дата</label>
+            <input type="text" id="dateInput" value="" placeholder="01.01.2001">
+          </div>
         
-       <div class="timer" id="timer">39:40</div>
-      
-      </div>
+          <div class="input-container2">
+            <label for="timeInput">Час</label>
+            <input type="text" id="timeInput" value="" placeholder="00:00:00">
+          </div>
+        
+          <div class="input-container2">
+            <label for="passengersInput">Пасажири</label>
+            <input type="text" id="passengersInput" value="2">
+          </div>
+        </div>
+        
+        <p class="green-ggg">Квиток разового використання</p>
+        
+        <div class="timer" id="timer">39:40</div>
     
     </div>
      
-    <button class="scan-btn" onclick="startTimer()" >Відсканувати QR-код</button>
-    <button onclick="saveData()">Сохранить</button>
+    <button class="scan-btn" onclick="startTimer()">Відсканувати QR-код</button>
   </div>
 
-
-
-  <script>
-    window.onload = () => {
-    const inputs = document.querySelectorAll('input');
-
-    inputs.forEach(input => {
-      const savedValue = localStorage.getItem(input.id);
-      if (savedValue) {
-        input.value = savedValue;
-      }
-    });
-  }
-
-  function saveData() {
-    const inputs = document.querySelectorAll('input');
-
-    inputs.forEach(input => {
-      localStorage.setItem(input.id, input.value);
-    });
-
-    alert('Данные сохранены!');
-  }
-  
-  let timerInterval;
-function startTimer() {
-  clearInterval(timerInterval);
-  let seconds = 39 * 60 + 40;
-  timerInterval = setInterval(() => {
-    let minutes = Math.floor(seconds / 60);
-    let sec = seconds % 60;
-    document.getElementById('timer').textContent = `${minutes}:${sec < 10 ? '0' : ''}${sec}`;
-    if (seconds <= 0) {
-      clearInterval(timerInterval);
-    }
-    seconds--;
-  }, 1000);
-}
-  </script>
+<script src="main.js"></script>
 </body>
 
 </html>
