@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2e2e2e;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  width: 360px;
+  background: #212121;
+  border-radius: 10px;
+  padding: 20px;
+  
+}
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.back-arrow {
+  font-size: 34px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #303030;
+  border: none;
+  border-radius: 40px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background: #303030;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+.tabs .active {
+  background: #636363;
+  color: #5DC12D;
+}
+
+.ticket {
+  background: #303030;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.ticket-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ticket-body {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.input-container label {
+  font-size: 14px;
+  color: #bababa;
+}
+
+.input-container input {
+  background: #303030;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5DC12D;
+  margin-top: 10px;
+}
+    
+/* АААААААААААААААААААААААААААААААААААААААААААААААААААААА */
+.scan-btn { 
+  width: 100%;
+  padding: 10px;
+  background: #5DC12D;
+  border: none;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 17vh;
+  cursor: pointer;
+}
+
+
+.verh-text {
+  font-size: 14px;
+  color: rgb(201, 201, 201);
+  line-height: 150%;
+}
+
+.gagagag-info {
+  display: flex;
+  align-items: center;
+}
+
+.input-container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  width: 110px;
+}
+
+.input-container2 label {
+  font-size: 14px;
+  color: #bababa;
+}
+
+.input-container2 input {
+  background: #303030;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.green-ggg {
+  color: #5DC12D;
+}
